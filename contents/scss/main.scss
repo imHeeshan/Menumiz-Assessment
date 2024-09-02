@@ -1,0 +1,17 @@
+@import 'variables';
+
+// Styles
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: $font-stack;
+    background-color: $black-main;
+    color: $white;
+}
