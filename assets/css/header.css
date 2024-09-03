@@ -14,7 +14,6 @@ header {
   flex-direction: row;
   align-items: center;
   border-bottom: 1px solid #272727;
-  flex-wrap: wrap;
 }
 header .logo-section {
   padding: 20px 16px 20px 40px;
@@ -25,7 +24,7 @@ header .logo-section {
   background-color: #272727;
   width: 100%;
   max-width: 240px;
-  flex: 1;
+  transition: 0.3s;
 }
 header .header-right {
   display: flex;
@@ -91,19 +90,16 @@ header .header-right .header-right-content .notification-container .notification
   header .logo-section {
     max-width: 120px;
   }
-  .title {
+  header .title {
     display: none;
   }
 }
 @media only screen and (max-width: 600px) {
-  header {
-    flex-direction: column;
+  header .isShow {
+    max-width: 240px;
   }
-  header .title {
+  header .isShow .title {
     display: flex;
-  }
-  header .logo-section {
-    max-width: 100%;
   }
   header .header-right {
     width: 100%;
@@ -117,7 +113,6 @@ header .header-right .header-right-content .notification-container .notification
   header .header-right .header-right-content {
     display: none;
     margin-top: 8px;
-    width: 100%;
   }
   header .header-right .header-right-content span {
     flex: 1;
