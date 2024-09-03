@@ -1,0 +1,86 @@
+@import 'variables';
+
+.side-nav {
+    transition: .3s;
+    max-width: 240px;
+    flex: 1;
+    flex-direction: column;
+    background-color: $dark;
+    justify-content: space-between;
+
+    path {
+        fill: $gray-main-dark;
+    }
+
+    a {
+        padding: 14px 40px;
+        font-size: 15px;
+        color: $gray-main-dark;
+        display: flex;
+        gap: 12px;
+        margin-bottom: 8px;
+        align-items: center;
+
+        img {
+            fill: red;
+        }
+
+        .notification {
+            background-color: $notify-yellow;
+            color: $dark;
+            font-size: 12.616px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%;
+            padding: 5.5px 8px;
+            border-radius: 20px;
+        }
+
+    }
+}
+
+
+.side-nav {
+
+
+    .active,
+    a:hover,
+    a:focus {
+        background-color: $primary-color;
+        color: $white;
+        border-radius: 0px 40px 40px 0px;
+
+        path {
+            fill: $white;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    .isShow {
+        max-width: 240px !important;
+
+        a {
+            p {
+                display: flex !important;
+            }
+        }
+    }
+
+    .side-nav {
+        max-width: 120px;
+
+        a {
+            padding: 14px 24px;
+
+            p {
+                display: none;
+
+            }
+        }
+
+    }
+
+}
