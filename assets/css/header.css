@@ -1,79 +1,68 @@
-.logo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 8px;
-}
-.logo .title {
-  font-size: 20px;
-  font-weight: 900;
-}
-
 header {
   display: flex;
   flex-direction: row;
   align-items: center;
   border-bottom: 1px solid #272727;
 }
+header .title {
+  padding-left: 8px;
+}
 header .logo-section {
-  padding: 20px 16px 20px 40px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   background-color: #272727;
+  padding: 20px 16px 20px 40px;
   width: 100%;
   max-width: 240px;
-  transition: 0.3s;
 }
-header .header-right {
+header .logo,
+header .sub-logo {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 10px 40px;
+}
+header .sub-logo {
+  padding: 10px 5px 10px 40px;
+}
+header .header-content {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   flex: 1;
+  padding-right: 16px;
 }
-header .header-right .sub-logo-content {
-  flex-direction: row;
-  display: flex;
-  gap: 8px;
-  align-items: center;
+header .header-content .title {
+  font-size: 15px;
 }
-header .header-right .sub-logo-content .title {
-  font-size: 14px;
-}
-header .header-right .collapse-btn {
-  display: none;
-}
-header .header-right .header-right-content {
+header .header-content .header-right-content {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 16px;
 }
-header .header-right .header-right-content span {
+header .header-content .header-right-content .content {
+  padding-right: 16px;
+}
+header .header-content .header-right-content span {
   display: flex;
   padding: 8px 16px;
   align-items: center;
   background-color: #272727;
   border-radius: 20px;
-  max-width: 280px;
-  min-width: 150px;
-  width: 100%;
-  flex: 1;
 }
-header .header-right .header-right-content span input {
+header .header-content .header-right-content span input {
   background-color: transparent;
   border: 0;
   color: #d9d9d9;
   padding-left: 16px;
   width: 100%;
 }
-header .header-right .header-right-content span input:focus-visible {
+header .header-content .header-right-content span input:focus-visible {
   outline: none;
 }
-header .header-right .header-right-content .notification-container {
+header .header-content .header-right-content .notification-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,11 +71,11 @@ header .header-right .header-right-content .notification-container {
   padding: 8px;
   border-radius: 50%;
 }
-header .header-right .header-right-content .notification-container .notify-icon {
+header .header-content .header-right-content .notification-container .notify-icon {
   width: 24px;
   height: 24px;
 }
-header .header-right .header-right-content .notification-container .notification-dot {
+header .header-content .header-right-content .notification-container .notification-dot {
   width: 8px;
   height: 8px;
   background-color: #ffd928;
@@ -96,43 +85,38 @@ header .header-right .header-right-content .notification-container .notification
   z-index: 1;
 }
 
-@media (max-width: 768px) {
-  header .isShow {
-    max-width: 240px;
-  }
-  header .isShow .title {
-    display: flex;
-  }
-  header .logo-section {
-    max-width: 120px;
-    padding: 14px 24px;
-  }
-  header .title {
+@media only screen and (max-width: 768px) {
+  header .header-content .title {
     display: none;
   }
 }
 @media only screen and (max-width: 600px) {
-  header .header-right {
-    width: 100%;
-    padding: 0 8px 0 20px;
+  header {
     flex-direction: column;
   }
-  header .header-right img {
+  header .logo-section {
+    max-width: 100% !important;
+  }
+  header .header-content {
+    width: 100%;
+    padding: 0 8px 0 20px;
+  }
+  header .header-content img {
     width: 20px;
     height: 20px;
   }
-  header .header-right .sub-logo-content .title {
+  header .header-content .sub-logo-content .title {
     display: flex;
   }
-  header .header-right .logo {
+  header .header-content .logo {
     justify-content: space-between;
     width: 100%;
   }
-  header .header-right .header-right-content .notification-container {
+  header .header-content .header-right-content .notification-container {
     background-color: transparent;
     padding: 0;
   }
-  header .header-right .header-right-content span {
+  header .header-content .header-right-content span {
     min-width: 103px;
   }
 }
