@@ -1,58 +1,49 @@
 @import 'variables';
 
 
-.logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-
-    .title {
-        font-size: 20px;
-        font-weight: 900;
-    }
-}
-
 header {
     display: flex;
     flex-direction: row;
     align-items: center;
     border-bottom: 1px solid $dark;
 
+    .title {
+        padding-left: 8px;
+    }
+
     .logo-section {
-        padding: 20px 16px 20px 40px;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+
         background-color: $dark;
+        padding: 20px 16px 20px 40px;
         width: 100%;
         max-width: 240px;
-        transition: .3s;
+    }
+
+    .logo,
+    .sub-logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
 
     }
 
-    .header-right {
+    .sub-logo {
+        padding: 10px 5px 10px 40px;
+    }
+
+    .header-content {
         display: flex;
         flex-direction: row;
-        align-items: center;
-        padding: 10px 40px;
         justify-content: space-between;
         flex: 1;
+        padding-right: 16px;
 
-        .sub-logo-content {
-            flex-direction: row;
-            display: flex;
-            gap: 8px;
-            align-items: center;
-
-            .title {
-                font-size: 14px;
-            }
-        }
-
-        .collapse-btn {
-            display: none;
+        .title {
+            font-size: 15px;
         }
 
         .header-right-content {
@@ -61,17 +52,17 @@ header {
             align-items: center;
             gap: 16px;
 
+            .content {
+                padding-right: 16px;
+            }
+
             span {
                 display: flex;
-
                 padding: 8px 16px;
                 align-items: center;
                 background-color: $dark;
                 border-radius: 20px;
-                max-width: 280px;
-                min-width: 150px;
-                width: 100%;
-                flex: 1;
+
 
                 input {
                     background-color: transparent;
@@ -110,42 +101,30 @@ header {
                     z-index: 1;
                 }
             }
-
-
         }
     }
 }
 
-// Responsi
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     header {
-        .isShow {
-            max-width: 240px;
-
+        .header-content {
             .title {
-                display: flex;
+                display: none;
             }
         }
-
-        .logo-section {
-            max-width: 120px;
-            padding: 14px 24px;
-        }
-
-        .title {
-            display: none;
-        }
     }
-
-
 }
 
 @media only screen and (max-width: 600px) {
     header {
-        .header-right {
+        flex-direction: column;
+        .logo-section{
+            max-width: 100%!important;
+        }
+        .header-content {
             width: 100%;
-            padding:0 8px 0 20px;
-            flex-direction: column;
+            padding: 0 8px 0 20px;
+           
             img {
                 width: 20px;
                 height: 20px;
@@ -163,7 +142,7 @@ header {
             }
 
             .header-right-content {
-                
+
 
                 .notification-container {
                     background-color: transparent;

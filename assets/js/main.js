@@ -42,13 +42,9 @@ function openNav() {
     }
   });
   function is_toggle () {
-    var collapse_button = document.getElementById("side-nav");
     var top_logo_section = document.getElementById("logo-section");
+    var collapse_button = document.getElementById("side-nav");
+    top_logo_section.classList.toggle("isShow");
+    collapse_button.classList.toggle("isShow");
     
-    if (collapse_button) {  
-      
-      collapse_button.classList.toggle("isShow");
-      top_logo_section.classList.toggle("isShow");
-    
-    } 
   }
