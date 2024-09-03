@@ -38,6 +38,10 @@ header .header-right .sub-logo-content {
   flex-direction: row;
   display: flex;
   gap: 8px;
+  align-items: center;
+}
+header .header-right .sub-logo-content .title {
+  font-size: 14px;
 }
 header .header-right .collapse-btn {
   display: none;
@@ -50,18 +54,21 @@ header .header-right .header-right-content {
 }
 header .header-right .header-right-content span {
   display: flex;
-  width: auto;
   padding: 8px 16px;
   align-items: center;
   background-color: #272727;
   border-radius: 20px;
+  max-width: 280px;
+  min-width: 150px;
+  width: 100%;
+  flex: 1;
 }
 header .header-right .header-right-content span input {
   background-color: transparent;
   border: 0;
   color: #d9d9d9;
   padding-left: 16px;
-  flex: 1;
+  width: 100%;
 }
 header .header-right .header-right-content span input:focus-visible {
   outline: none;
@@ -73,53 +80,60 @@ header .header-right .header-right-content .notification-container {
   position: relative;
   background-color: #6556e0;
   padding: 8px;
-  border-radius: 20px;
+  border-radius: 50%;
+}
+header .header-right .header-right-content .notification-container .notify-icon {
+  width: 24px;
+  height: 24px;
 }
 header .header-right .header-right-content .notification-container .notification-dot {
   width: 8px;
   height: 8px;
   background-color: #ffd928;
   border-radius: 50%;
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  transform: translate(-200%, 173%);
+  margin-left: -10px;
+  margin-top: -15px;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {
-  header .logo-section {
-    max-width: 120px;
-  }
-  header .title {
-    display: none;
-  }
-}
-@media only screen and (max-width: 600px) {
   header .isShow {
     max-width: 240px;
   }
   header .isShow .title {
     display: flex;
   }
+  header .logo-section {
+    max-width: 120px;
+    padding: 14px 24px;
+  }
+  header .title {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
   header .header-right {
     width: 100%;
+    padding: 0 8px 0 20px;
     flex-direction: column;
-    padding: 10px 20px;
+  }
+  header .header-right img {
+    width: 20px;
+    height: 20px;
+  }
+  header .header-right .sub-logo-content .title {
+    display: flex;
   }
   header .header-right .logo {
     justify-content: space-between;
     width: 100%;
   }
-  header .header-right .header-right-content {
-    display: none;
-    margin-top: 8px;
+  header .header-right .header-right-content .notification-container {
+    background-color: transparent;
+    padding: 0;
   }
   header .header-right .header-right-content span {
-    flex: 1;
-  }
-  header .header-right .collapse-btn {
-    display: block;
-    background-color: transparent;
+    min-width: 103px;
   }
 }
 
