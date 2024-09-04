@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -17,6 +19,69 @@ body {
   font-family: "Urbanist";
   background-color: #151515;
   color: #fff;
+}
+
+#alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Semi-transparent black */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+#alert-overlay .message-box {
+  height: 100vh;
+  display: flex;
+}
+#alert-overlay .confirmation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  margin: auto;
+  background-color: #272727;
+  padding: 8px 12px;
+  border-radius: 12px;
+}
+#alert-overlay .confirmation .message {
+  text-align: center;
+  padding: 20px 0;
+}
+#alert-overlay .confirmation .heading,
+#alert-overlay .confirmation .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+#alert-overlay .confirmation .footer {
+  border-top: 1px solid rgb(70, 65, 65);
+}
+#alert-overlay .confirmation .footer button {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  margin-top: 8px;
+  color: #fff;
+}
+#alert-overlay .confirmation .footer button:first-child {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+#alert-overlay .confirmation .footer button:last-child {
+  background-color: #6556e0;
+}
+
+.is-show-alert {
+  display: block !important;
+  z-index: 111111;
 }
 
 /*# sourceMappingURL=main.css.map */

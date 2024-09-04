@@ -12,11 +12,26 @@
   top: -1px;
   padding: 0 28px;
   display: none;
-  z-index: 1111111;
+  z-index: 111;
   position: relative;
   background: #151515;
   border-radius: 8px;
   width: 416px;
+}
+.leave-details-container .btns {
+  padding: 50px 0;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+}
+.leave-details-container .btn {
+  border: 1px solid #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+.leave-details-container .btn:nth-child(2) {
+  background-color: #6556e0;
+  border-color: transparent;
 }
 .leave-details-container .leave-details {
   font-size: 12px;
