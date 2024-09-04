@@ -315,3 +315,10 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error("Element with id 'notification-list' not found.");
   }
 });
+
+
+function handle_apporve(){
+  const apporvel_alert = document.getElementById('alert-overlay');
+  apporvel_alert.classList.toggle("is-show-alert");
+
+}

@@ -23,6 +23,23 @@
 </head>
 
 <body>
+    <div id="alert-overlay"> 
+      <div class="message-box">
+        <div class="confirmation">
+            <div class="heading">
+                <p>Confirmation</p>
+                <img  onclick="handle_apporve()" src="./assets/img/close-circle.svg" alt="">
+            </div>
+            <div class="message">
+                <p>Are you sure want to approved Simon Minter sick leave for 1 day?</p>  
+            </div>
+            <div class="footer">
+                <button onclick="handle_apporve()">No</button>
+                <button onclick="handle_apporve()">Yes</button>
+            </div>
+           </div>
+      </div>
+    </div>
     <header>
         <div class="logo-section" id='logo-section'>
             <a href="/" class="logo">
@@ -130,6 +147,10 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="btns">
+            <a href="#" class="btn">Reject</a>
+            <a href="#" onclick="handle_apporve()" class="btn">Approve</a>
         </div>
     </div>
     <!-- svg use to change active color change and image quality -->
