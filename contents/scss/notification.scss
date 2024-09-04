@@ -1,0 +1,91 @@
+@import 'variables';
+
+.is-show-notifiy {
+    display: block !important;
+
+}
+
+.notify-container {
+    float: right;
+    right: 0;
+    top: -1px;
+    padding: 24px;
+    display: none;
+    z-index: 1111111;
+    position: relative;
+    background: $black-main;
+    border-radius: 8px;
+
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        gap: 95px;
+        padding: 0 24px;
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+        }
+    }
+
+    .notify-list-container {
+        padding: 24px;
+        width: 400px;
+
+        .is-read {
+            color: $gray-main-dark;
+        }
+
+        .list {
+            background: $dark;
+            margin-bottom: 8px;
+            border-radius: 12px;
+            padding: 16px;
+            flex-direction: row;
+            display: flex;
+            gap: 16px;
+            transition: .5s;
+
+            .notification-container {
+
+                .notification-dot-active {
+                    width: 8px;
+                    height: 8px;
+                    background-color: $notify-yellow;
+                    border-radius: 50%;
+                    margin-left: -11px;
+                    z-index: 1;
+                    margin-top: -42px;
+                }
+            }
+
+            .notify-content {
+                gap: 12px;
+                display: flex;
+                flex-direction: column;
+
+                .notify-detail {
+                    font-weight: 400;
+                    font-size: 14px;
+
+
+                    span {
+                        font-weight: 900;
+                    }
+                }
+
+                .notify-time {
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 20px;
+                    color: $gray-500;
+                }
+
+            }
+        }
+    }
+}

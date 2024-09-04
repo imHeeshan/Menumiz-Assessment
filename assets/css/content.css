@@ -1,0 +1,349 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  background-color: #272727;
+}
+.main .main-content {
+  padding: 16px 40px;
+  width: 100%;
+}
+.main .main-content nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.main .main-content nav a {
+  padding: 8px;
+}
+.main .main-content nav .active {
+  border-bottom: 2px solid #6556e0;
+}
+.main .main-content .tab-container {
+  width: 100%;
+  margin: 30px 0;
+}
+.main .main-content .tab-container .tab-content {
+  display: none;
+}
+.main .main-content .tab-container .tab-content.active {
+  display: block;
+}
+.main .main-content .tab-container .tabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 16px 0 0;
+}
+.main .main-content .tab-container .tabs button {
+  border: none;
+  transition: 0.8s;
+}
+.main .main-content .tab-container .tabs .right-btn {
+  border-radius: 0px 16px 16px 0px;
+  padding: 10px 12px;
+}
+.main .main-content .tab-container .tabs .left-btn {
+  border-radius: 16px 0 0 16px;
+  padding: 10px 20px;
+}
+.main .main-content .tab-container .tabs .active {
+  background-color: #6556e0;
+  color: #fff;
+}
+.main .main-content .tab-container .tab-content-container {
+  padding: 20px;
+  background-color: #1e1e1e;
+  margin-top: 8px;
+  border-radius: 8px;
+}
+.main .main-content .tab-container .tab-content-container .tab-header a {
+  color: #d9d9d9;
+}
+.main .main-content .tab-container .tab-content-container .tab-header .active {
+  border-bottom: 1px solid #6556e0;
+  color: #fff;
+}
+.main .main-content .tab-container .tab-content-container .tab-header nav {
+  justify-content: space-between;
+}
+.main .main-content .tab-container .tab-content-container .tab-header nav .date-picker-container {
+  position: relative;
+  display: inline-block;
+}
+.main .main-content .tab-container .tab-content-container .tab-header nav .date-picker-container .date-icon {
+  width: 100%;
+  gap: 8px;
+}
+.main .main-content .tab-container .tab-content-container .tab-header nav .date-picker-container .selected-date {
+  font-size: 14px;
+}
+.main .main-content .tab-container .tab-content-container .tab-header nav .date-picker {
+  border: none;
+  background: transparent;
+  color: transparent;
+  width: 0px;
+}
+.main .main-content .tab-container .tab-content-container .tab-header nav .date-icon {
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+.main .notification-container {
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+.main .notification-container .notify-icon {
+  width: 24px;
+  height: 24px;
+}
+.main .notification-container .notification-dot {
+  width: 5px;
+  height: 5px;
+  background-color: #ffd928;
+  border-radius: 50%;
+  margin-top: -30px;
+  margin-right: -10px;
+  z-index: 1;
+}
+
+.chart h4 {
+  padding: 10px 0;
+}
+.chart .chart-content {
+  display: flex;
+  gap: 16px;
+}
+.chart h1 {
+  font-size: 28px;
+}
+
+.dashboard {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+}
+.dashboard .date-picker {
+  border: none;
+  background: transparent;
+  color: transparent;
+  width: 0px;
+}
+.dashboard .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.dashboard .header .title {
+  font-size: 15px;
+}
+.dashboard .header h6 {
+  font-size: 15px;
+}
+.dashboard .header .sub-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  gap: 16px;
+}
+.dashboard .header .sub-header div {
+  align-items: center;
+  display: flex;
+}
+.dashboard .heatmap {
+  display: flex;
+  margin-bottom: 20px;
+}
+.dashboard .heatmap button {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.dashboard .heatmap button.active {
+  background-color: #e74c3c;
+}
+.dashboard .heatmap button:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.dashboard .heatmap button:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.dashboard .heatmap button:not(:last-child) {
+  border-right: 1px solid #272727;
+}
+.dashboard .stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.dashboard .stats .stat {
+  text-align: center;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 16px;
+}
+.dashboard .stats .stat h2 {
+  margin: 10px 0;
+}
+.dashboard .stats .stat .circle {
+  padding-top: 20px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: conic-gradient(#8e44ad 0%, #8e44ad 50%, #555 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.dashboard .stats .stat:nth-child(2) .circle {
+  background: conic-gradient(#e67e22 0%, #e67e22 30%, #555 30%);
+}
+.dashboard .stats .stat:nth-child(3) .circle {
+  background: conic-gradient(#3498db 0%, #3498db 20%, #555 20%);
+}
+.dashboard .stats .stat p {
+  margin-top: 5px;
+  color: #aaa;
+  padding: 16px 0;
+  font-size: 15px;
+}
+.dashboard p {
+  text-align: left;
+  color: #aaa;
+  font-size: 13px;
+}
+.dashboard .most-day li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+.dashboard .most-day li .user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+@media only screen and (max-width: 968px) {
+  .stats .circle {
+    padding-top: 20px;
+    width: 62px !important;
+    height: 62px !important;
+    border-radius: 50%;
+    background: conic-gradient(#8e44ad 0%, #8e44ad 50%, #555 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .stats .circle h2 {
+    font-size: 15px !important;
+  }
+  .chart .chart-content {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 668px) {
+  .flatpickr-calendar.animate.open {
+    top: 677.859px;
+    left: auto;
+    right: 0 !important;
+  }
+  .main-content nav {
+    flex-direction: column;
+    align-items: start !important;
+  }
+  .main-content .tab-container .tabs {
+    display: flex;
+    flex-direction: column !important;
+    width: 100%;
+  }
+  .main-content .tab-container .tabs .tab-btns {
+    width: 100%;
+  }
+  .main-content .tab-container .tabs button {
+    border: none;
+    transition: 0.8s;
+    margin-top: 8px;
+    width: 45%;
+  }
+  .main-content .tab-container .tabs .right-btn {
+    border-radius: 16px 0 0 16px;
+    padding: 10px 5px;
+    flex: 1;
+  }
+  .main-content .tab-container .tabs .left-btn {
+    border-radius: 16px 0 0 16px;
+    padding: 10px 5px;
+    flex: 1;
+  }
+  .main-content .tab-container .tabs .active {
+    background-color: #6556e0;
+    color: #fff;
+  }
+  .main-content .tab-container .tab-content .tab-header nav {
+    flex-direction: column;
+  }
+  .main-content .tab-container .tab-content .tab-header nav .title {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .chart .chart-content .header .title {
+    font-size: 12px;
+  }
+  .chart .heatmap {
+    flex-direction: column;
+  }
+  .chart .heatmap button:first-child {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .chart .heatmap button:last-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  .chart .heatmap button:not(:last-child) {
+    border-bottom: 1px solid #898989;
+  }
+  .chart .stats {
+    flex-direction: column;
+  }
+  .chart .stats p {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .chart .chart-content .header {
+    flex-direction: column;
+  }
+  .chart .chart-content .header .title {
+    font-size: 15px;
+  }
+  .chart .chart-content .header .sub-header {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=content.css.map */

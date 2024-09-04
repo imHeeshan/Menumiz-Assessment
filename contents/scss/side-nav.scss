@@ -1,11 +1,14 @@
 @import 'variables';
 
+#side-nav-placeholder{
+  width: 240px;
+}
 .side-nav {
     transition: .3s;
     max-width: 240px;
     flex: 1;
     flex-direction: column;
-    background-color: $dark;
+    background-color: $black-main;
     justify-content: space-between;
 
     path {
@@ -59,7 +62,7 @@
 
 @media only screen and (max-width: 600px) {
 
-    .isShow {
+    .is-show {
         max-width: 200px !important;
         
         a {

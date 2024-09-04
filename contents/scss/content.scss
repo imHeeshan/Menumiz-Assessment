@@ -1,0 +1,473 @@
+@import 'variables';
+
+.main {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    background-color: $dark;
+
+    .main-content {
+        padding: 16px 40px;
+        width: 100%;
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+
+            a {
+                padding: 8px;
+            }
+
+            .active {
+                border-bottom: 2px solid $primary-color;
+            }
+        }
+
+        .tab-container {
+            width: 100%;
+            margin: 30px 0;
+
+
+            .tab-content {
+                display: none;
+            }
+
+            .tab-content.active {
+                display: block;
+            }
+
+            .tabs {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                padding: 16px 0 0;
+
+                button {
+                    border: none;
+                    transition: .8s;
+                }
+
+                .right-btn {
+                    border-radius: 0px 16px 16px 0px;
+                    padding: 10px 12px;
+
+                }
+
+                .left-btn {
+                    border-radius: 16px 0 0 16px;
+                    padding: 10px 20px;
+
+                }
+
+                .active {
+                    background-color: $primary-color;
+                    color: $white;
+                }
+            }
+
+            .tab-content-container {
+                padding: 20px;
+                background-color: $secondary-dark;
+                margin-top: 8px;
+                border-radius: 8px;
+
+                .tab-header {
+                    a {
+                        color: $gray-font;
+                    }
+
+                    .active {
+                        border-bottom: 1px solid $primary-color;
+                        color: $white;
+                    }
+
+                    nav {
+                        justify-content: space-between;
+
+                        .date-picker-container {
+
+                            .date-icon {
+                                width: 100%;
+                                gap: 8px;
+                            }
+
+                            position: relative;
+                            display: inline-block;
+
+                            .selected-date {
+                                font-size: 14px
+                            }
+                        }
+
+                        .date-picker {
+                            border: none;
+                            background: transparent;
+                            color: transparent;
+                            width: 0px;
+                        }
+
+                        .date-icon {
+                            font-size: 24px;
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 40px;
+                            height: 40px;
+
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .notification-container {
+        display: flex;
+        justify-content: end;
+        position: relative;
+
+        .notify-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .notification-dot {
+            width: 5px;
+            height: 5px;
+            background-color: #ffd928;
+            border-radius: 50%;
+            margin-top: -30px;
+            margin-right: -10px;
+            z-index: 1;
+        }
+    }
+}
+
+//
+.chart {
+    h4 {
+        padding: 10px 0;
+    }
+
+    .chart-content {
+        display: flex;
+        gap: 16px;
+
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
+
+.dashboard {
+   
+    background-color: $secondary-dark;
+    padding: 20px;
+    border-radius: 10px;
+
+    .date-picker {
+        border: none;
+        background: transparent;
+        color: transparent;
+        width: 0px;
+    }
+
+
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: 15px;
+
+        .title {
+            font-size: 15px;
+        }
+
+        h6 {
+            font-size: 15px;
+        }
+
+        .sub-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            gap: 16px;
+
+            div {
+                align-items: center;
+                display: flex;
+            }
+        }
+    }
+
+    .heatmap {
+        display: flex;
+
+        margin-bottom: 20px;
+
+        button {
+            background-color: #444;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 12px;
+
+            &.active {
+                background-color: #e74c3c;
+            }
+
+            &:first-child {
+                border-top-left-radius: 8px;
+                border-bottom-left-radius: 8px;
+            }
+
+            &:last-child {
+                border-top-right-radius: 8px;
+                border-bottom-right-radius: 8px;
+            }
+
+            &:not(:last-child) {
+                border-right: 1px solid $dark;
+            }
+        }
+    }
+
+    .stats {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+
+        .stat {
+            text-align: center;
+            display: flex;
+            flex-direction: column-reverse;
+            padding: 16px;
+
+            h2 {
+                margin: 10px 0;
+            }
+
+            .circle {
+                padding-top: 20px;
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+                background: conic-gradient(#8e44ad 0%, #8e44ad 50%, #555 50%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+            }
+
+            &:nth-child(2) .circle {
+                background: conic-gradient(#e67e22 0%, #e67e22 30%, #555 30%);
+            }
+
+            &:nth-child(3) .circle {
+                background: conic-gradient(#3498db 0%, #3498db 20%, #555 20%);
+            }
+
+            p {
+                margin-top: 5px;
+                color: #aaa;
+                padding: 16px 0;
+                font-size: 15px;
+            }
+        }
+    }
+
+    p {
+        text-align: left;
+        color: #aaa;
+        font-size: 13px;
+    }
+
+    .most-day {
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+
+            .user {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:968px) {
+    .stats {
+        .circle {
+
+            padding-top: 20px;
+            width: 62px !important;
+            height: 62px !important;
+            border-radius: 50%;
+            background: conic-gradient(#8e44ad 0%, #8e44ad 50%, #555 50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+
+            h2 {
+                font-size: 15px !important;
+            }
+        }
+    }
+
+    .chart {
+        .chart-content {
+            display: flex;
+            gap: 16px;
+            flex-direction: column;
+
+        }
+    }
+}
+
+@media only screen and (max-width: 668px) {
+
+    .flatpickr-calendar.animate.open {
+        top: 677.859px;
+        left: auto;
+        right: 0 !important;
+    }
+
+    .main-content {
+        nav {
+            flex-direction: column;
+            align-items: start !important;
+        }
+
+        .tab-container {
+            .tabs {
+                display: flex;
+                flex-direction: column !important;
+                width: 100%;
+
+                .tab-btns {
+                    width: 100%;
+
+                }
+
+                button {
+                    border: none;
+                    transition: .8s;
+                    margin-top: 8px;
+                    width: 45%;
+                }
+
+                .right-btn {
+
+                    border-radius: 16px 0 0 16px;
+                    padding: 10px 5px;
+                    flex: 1;
+
+
+                }
+
+                .left-btn {
+                    border-radius: 16px 0 0 16px;
+                    padding: 10px 5px;
+                    flex: 1;
+
+
+                }
+
+                .active {
+                    background-color: $primary-color;
+                    color: $white;
+                }
+            }
+
+            .tab-content {
+                .tab-header {
+                    nav {
+                        .title {
+                            display: flex;
+                            flex-wrap: wrap;
+                        }
+
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+
+    .chart {
+        .chart-content {
+            .header {
+
+                .title {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .heatmap {
+            flex-direction: column;
+
+            button {
+                &:first-child {
+                    border-bottom-left-radius: 0;
+                    border-top-left-radius: 8px;
+                    border-top-right-radius: 8px;
+                }
+
+                &:last-child {
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 8px;
+                    border-bottom-left-radius: 8px;
+                }
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $gray-main-dark;
+                }
+            }
+        }
+
+        .stats {
+            flex-direction: column;
+
+            p {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .chart {
+        .chart-content {
+            .header {
+                .title {
+                    font-size: 15px;
+                }
+
+                flex-direction: column;
+
+                .sub-header {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
