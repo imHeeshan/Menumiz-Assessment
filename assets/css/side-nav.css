@@ -1,9 +1,13 @@
+#side-nav-placeholder {
+  width: 240px;
+}
+
 .side-nav {
   transition: 0.3s;
   max-width: 240px;
   flex: 1;
   flex-direction: column;
-  background-color: #272727;
+  background-color: #151515;
   justify-content: space-between;
 }
 .side-nav path {
@@ -46,10 +50,10 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .isShow {
+  .is-show {
     max-width: 200px !important;
   }
-  .isShow a p {
+  .is-show a p {
     display: flex !important;
   }
   .side-nav {

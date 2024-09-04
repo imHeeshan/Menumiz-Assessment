@@ -1,0 +1,233 @@
+@import 'variables';
+
+.is-show-notifiy {
+    display: block !important;
+
+}
+
+.is-show-leave {
+    display: block !important;
+}
+
+.leave-details-container {
+    float: right;
+    right: 0;
+    top: -1px;
+    padding: 0 28px;
+    display: none;
+    z-index: 1111111;
+    position: relative;
+    background: $black-main;
+    border-radius: 8px;
+    width: 416px;
+
+    .leave-details {
+        font-size: 12px;
+
+        .time-details {
+            .hour-details {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 8px 0;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .collapse-hour-details {
+                table {
+                    width: 100%;
+                    border: 1px solid $gray-500;
+                    border-radius: 8px;
+                    padding: 8px;
+
+                    thead {
+                        tr {
+                            flex: 1;
+                            gap: 8px;
+                            display: flex;
+                            justify-content: space-between;
+                            background-color: $dark;
+                            padding: 12px;
+                            border-radius: 8px;
+
+                            th {
+                                display: flex;
+                                align-items: center;
+                            }
+                        }
+
+                    }
+
+                    tbody {
+                        tr {
+                            flex: 1;
+                            gap: 8px;
+                            display: flex;
+                            justify-content: space-between;
+
+                            padding: 12px;
+                            border-radius: 8px;
+
+                            td {
+                                display: flex;
+                                align-items: center;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        gap: 95px;
+        padding: 0 24px;
+        align-items: center;
+        padding: 24px 0;
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+        }
+    }
+
+    #approvel-level {
+        border: 1px solid;
+        padding: 8px;
+        border-radius: 8px;
+    }
+
+    .approval-container {
+        display: flex;
+        flex: 1;
+        padding-bottom: 16px;
+        flex-direction: row;
+        gap: 8px;
+        align-items: center;
+
+        .is-approved {
+            background-color: $green !important;
+        }
+
+        .notification-dot-active {
+            width: 8px;
+            height: 8px;
+            background-color: $notify-yellow;
+            border-radius: 50%;
+
+            z-index: 1;
+
+        }
+
+
+        .approval-sts {
+            display: flex;
+            flex-direction: column;
+            color: $gray-main-dark;
+
+            .approved-user {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 16px;
+
+                .pending-sts {
+                    color: $gray-main-dark !important;
+                }
+
+                p {
+                    &:last-child {
+                        color: $white;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .notify-list-container {
+        padding: 24px;
+        width: 400px;
+
+        .is-read {
+            color: $gray-main-dark;
+        }
+
+        .list {
+            background: $dark;
+            margin-bottom: 8px;
+            border-radius: 12px;
+            padding: 16px;
+            flex-direction: row;
+            display: flex;
+            gap: 16px;
+            transition: .5s;
+
+            .notification-container {
+
+                .notification-dot-active {
+                    width: 8px;
+                    height: 8px;
+                    background-color: $notify-yellow;
+                    border-radius: 50%;
+                    margin-left: -11px;
+                    z-index: 1;
+                    margin-top: -42px;
+                }
+            }
+
+            .notify-content {
+                gap: 12px;
+                display: flex;
+                flex-direction: column;
+
+                .notify-detail {
+                    font-weight: 400;
+                    font-size: 14px;
+
+
+                    span {
+                        font-weight: 900;
+                    }
+                }
+
+                .notify-time {
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 20px;
+                    color: $gray-500;
+                }
+
+            }
+        }
+    }
+
+    .comment {
+        textarea {
+            width: 100%;
+            height: 78px;
+            background: transparent;
+            border-radius: 8px
+        }
+    }
+}
+
+
+@media only screen and (max-width:600px) {
+
+
+    .leave-details-container {
+        padding: 0 12px;
+        width: 315px;
+    }
+}
